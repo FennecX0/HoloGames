@@ -1,1 +1,121 @@
-
+[
+  {
+    "uid": "A1XZ",
+    "name": "Mori Calliope",
+    "title": "The Grim Reaper",
+    "rarity": "TOH",
+    "origin": "CELESTIAL",
+    "atk": 620,
+    "def": 550,
+    "mp": 500,
+    "value": 8450,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqMoriCalliope"
+  },
+  {
+    "uid": "G3YT",
+    "name": "Baelz",
+    "title": "The Wild Chaos",
+    "rarity": "ALT+",
+    "origin": "CHAOS",
+    "atk": 610,
+    "def": 520,
+    "mp": 490,
+    "value": 9350,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqBaelz"
+  },
+  {
+    "uid": "Q9LK",
+    "name": "Kronii",
+    "title": "Timeless Creation",
+    "rarity": "SSR",
+    "origin": "VAGUE",
+    "atk": 570,
+    "def": 540,
+    "mp": 530,
+    "value": 3175,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqKronii"
+  },
+  {
+    "uid": "L4JP",
+    "name": "Irys",
+    "title": "Revelation Vampire",
+    "rarity": "SR",
+    "origin": "CELESTIAL",
+    "atk": 500,
+    "def": 460,
+    "mp": 600,
+    "value": 1520,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqIrys"
+  },
+  {
+    "uid": "Z2HD",
+    "name": "Shiori",
+    "title": "The Golden Void",
+    "rarity": "SP",
+    "origin": "VAGUE",
+    "atk": 490,
+    "def": 450,
+    "mp": 480,
+    "value": 1000,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqShiori"
+  },
+  {
+    "uid": "F7RM",
+    "name": "Kiara",
+    "title": "Kaiser\u2019s Red Phoenix",
+    "rarity": "RRR",
+    "origin": "JUSTICE",
+    "atk": 460,
+    "def": 430,
+    "mp": 420,
+    "value": 390,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqKiara"
+  },
+  {
+    "uid": "J2NV",
+    "name": "Ina",
+    "title": "The Kraken",
+    "rarity": "R",
+    "origin": "VAGUE",
+    "atk": 340,
+    "def": 310,
+    "mp": 320,
+    "value": 210,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqIna"
+  },
+  {
+    "uid": "W5TY",
+    "name": "Raora Panthera",
+    "title": "Lucifer's Panthera",
+    "rarity": "TOH",
+    "origin": "VAGUE",
+    "atk": 600,
+    "def": 530,
+    "mp": 570,
+    "value": 9320,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqRaoraPanthera"
+  },
+  {
+    "uid": "U8KC",
+    "name": "Bijou",
+    "title": "Destruction Gem",
+    "rarity": "SSR+",
+    "origin": "CELESTIAL",
+    "atk": 580,
+    "def": 540,
+    "mp": 550,
+    "value": 8420,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqBijou"
+  },
+  {
+    "uid": "M9AV",
+    "name": "Cecilia",
+    "title": "Mastermind Puppet",
+    "rarity": "RR",
+    "origin": "VAGUE",
+    "atk": 390,
+    "def": 360,
+    "mp": 350,
+    "value": 310,
+    "image": "https://yt3.googleusercontent.com/ytc/AGIKgqCecilia"
+  }
