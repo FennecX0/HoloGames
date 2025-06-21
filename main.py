@@ -4,17 +4,21 @@ import random
 import json
 import os
 
+# ✅ Setup Discord Intents
 intents = discord.Intents.default()
+intents.message_content = True  # Required for commands to work
+
+# ✅ Bot setup with prefix and intents
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Load channel ID from env
+# ✅ Load allowed channel ID from environment
 ALLOWED_CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 
-# Load cards from JSON
+# ✅ Load card data from cards.json
 with open("cards.json", "r", encoding="utf-8") as f:
     cards = json.load(f)
 
-# Rarity color map
+# ✅ Define rarity color codes for embed visuals
 RARITY_COLORS = {
     "C": 0x95a5a6,
     "R": 0x3498db,
@@ -31,15 +35,18 @@ RARITY_COLORS = {
 
 @bot.event
 async def on_ready():
-    print(f"🎴 Gacha bot online as {bot.user}!")
+    print(f"🎴 Gacha bot is online as {bot.user}!")
 
 @bot.command()
 async def pull(ctx):
+    # ✅ Check if the command was used in the correct channel
     if ctx.channel.id != ALLOWED_CHANNEL_ID:
-        return  # Ignore pulls in other channels
+        return  # Do nothing if used in the wrong channel
 
+    # ✅ Pick a random card
     card = random.choice(cards)
 
+    # ✅ Build the embed message
     embed = discord.Embed(
         title=f"{card['name']} — {card['title']}",
         description=(
@@ -55,5 +62,5 @@ async def pull(ctx):
 
     await ctx.send(embed=embed)
 
-# Run the bot
+# ✅ Run the bot using the Discord token from Railway variables
 bot.run(os.getenv("DISCORD_TOKEN"))
