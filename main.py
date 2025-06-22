@@ -19,6 +19,7 @@ rarity_weights = {
     "TOH": 0.01
 }
 
+# Rarity animation GIFs
 rarity_animations = {
     "C": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
     "R": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
@@ -29,11 +30,13 @@ rarity_animations = {
     "TOH": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif"
 }
 
-# Bot setup
+# Bot setup with required intents
 intents = discord.Intents.default()
+intents.message_content = True  # ✅ This is REQUIRED for message commands like !gacha
+
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Gacha draw helper
+# Helper to draw a card
 def draw_card():
     rarities = list(rarity_weights.keys())
     weights = list(rarity_weights.values())
@@ -41,32 +44,35 @@ def draw_card():
     possible_cards = [card for card in cards if card["rarity"] == rarity]
     return random.choice(possible_cards)
 
+# Bot ready event
 @bot.event
 async def on_ready():
-    print(f"Logged in as {bot.user}")
+    print(f"✅ Logged in as {bot.user}")
 
+# Gacha command
 @bot.command()
 async def gacha(ctx):
     card = draw_card()
 
-    # Show animation first
-    anim = rarity_animations.get(card["rarity"], "")
-    await ctx.send(f"🎆 Summoning... get ready!", file=discord.File(fp=os.devnull) if not anim else None, embed=discord.Embed(title="✨", image=anim) if anim else None)
-    await ctx.send(anim)
+    # Send cutscene animation
+    anim_url = rarity_animations.get(card["rarity"], "")
+    if anim_url:
+        await ctx.send(anim_url)
 
     # Wait 6 seconds for dramatic effect
     await asyncio.sleep(6)
 
-    # Show card reveal
+    # Reveal card
     embed = discord.Embed(
         title=f"You pulled a {card['rarity']} card!",
-        description=f"**{card['name']}**\n💥 ATK: `{card['attack']}` | 🛡 DEF: `{card['defense']}`\n🎯 Value: ¥{card['value']}",
-        color=discord.Color.gold() if card['rarity'] in ["SSR", "TOH"] else discord.Color.blue()
+        description=f"**{card['name']}**\n💥 ATK: `{card['attack']}` | 🛡 DEF: `{card['defense']}`\n💰 Value: ¥{card['value']}",
+        color=discord.Color.gold() if card['rarity'] in ["SSR", "TOH"] else discord.Color.purple() if card['rarity'] in ["SR", "SP"] else discord.Color.blue()
     )
+
     if card.get("title"):
         embed.set_footer(text=card["title"])
 
     await ctx.send(embed=embed)
 
-# Start bot
+# Run bot using token from Railway environment variable
 bot.run(os.getenv("DISCORD_TOKEN"))
