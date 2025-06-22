@@ -114,16 +114,17 @@ async def gacha10(ctx):
         await ctx.send(anim)
     await asyncio.sleep(6)
 
+    embed = discord.Embed(
+        title=f"🎉 {ctx.author.display_name}'s 10x Pull (Best: {best_rarity})",
+        color=rarity_color(best_rarity)
+    )
     for i, card in enumerate(pulled, start=1):
-        embed = discord.Embed(
-            title=f"🔹 {ctx.author.display_name}'s Card {i}/10",
-            description=f"**{card['rarity']}** — {card['name']}\n💥 ATK: `{card['attack']}` | 🛡 DEF: `{card['defense']}`\n💰 Value: ¥{card['value']}",
-            color=rarity_color(card['rarity'])
+        embed.add_field(
+            name=f"{i}. {card['rarity']} — {card['name']}",
+            value=f"💥 ATK: `{card['attack']}` | 🛡 DEF: `{card['defense']}` | 💰 ¥{card['value']}",
+            inline=False
         )
-        if card.get("title"):
-            embed.set_footer(text=card["title"])
-        await ctx.send(embed=embed)
-        await asyncio.sleep(0.3)
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def inventory(ctx):
@@ -134,22 +135,28 @@ async def inventory(ctx):
         await ctx.send(f"{ctx.author.display_name}, your inventory is empty!")
         return
 
-    count = len(data[uid])
-    rarity_count = {}
-    for card in data[uid]:
-        rarity = card["rarity"]
-        rarity_count[rarity] = rarity_count.get(rarity, 0) + 1
+    user_cards = data[uid]
+    total = len(user_cards)
 
-    description = f"📦 Total cards: **{count}**\n\n"
-    for rarity, num in sorted(rarity_count.items(), key=lambda x: -x[1]):
-        description += f"🔹 {rarity}: {num}\n"
+    # Count rarities
+    rarity_count = {}
+    character_names = set()
+    for card in user_cards:
+        rarity = card["rarity"]
+        name = card["name"]
+        rarity_count[rarity] = rarity_count.get(rarity, 0) + 1
+        character_names.add(name)
+
+    rarity_lines = "\n".join(f"- {rarity}: {count}" for rarity, count in sorted(rarity_count.items(), key=lambda x: -x[1]))
+    name_list = ", ".join(sorted(character_names))
 
     embed = discord.Embed(
         title=f"{ctx.author.display_name}'s Inventory",
-        description=description,
+        description=f"📦 Total cards: **{total}**\n\n🔹 **Rarity Summary:**\n{rarity_lines}\n\n🔸 **Characters Collected:**\n{name_list}",
         color=discord.Color.teal()
     )
+
     await ctx.send(embed=embed)
 
-# === Run the bot ===
+# Run bot
 bot.run(os.getenv("DISCORD_TOKEN"))
