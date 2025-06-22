@@ -6,6 +6,7 @@ import asyncio
 import os
 import string
 import secrets
+import time
 
 # === Load cards ===
 with open("cards.json", "r", encoding="utf-8") as f:
@@ -41,13 +42,14 @@ rarity_titles = {
 }
 
 PULL_LIMIT = 50
+COOLDOWN_SECONDS = 1800  # 30 minutes
 
-# === Setup bot ===
+# === Bot setup ===
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# === Utilities ===
+# === Helpers ===
 
 def rarity_color(rarity):
     if rarity in ["SSR", "TOH"]:
@@ -73,16 +75,22 @@ def draw_card():
 
 # === Inventory ===
 
-def load_inventory():
-    if not os.path.exists("inventory.json"):
-        with open("inventory.json", "w") as f:
-            json.dump({}, f)
-    with open("inventory.json", "r", encoding="utf-8") as f:
+def load_json(filename, fallback={}):
+    if not os.path.exists(filename):
+        with open(filename, "w") as f:
+            json.dump(fallback, f)
+    with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def save_inventory(data):
-    with open("inventory.json", "w", encoding="utf-8") as f:
+def save_json(filename, data):
+    with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
+def load_inventory():
+    return load_json("inventory.json")
+
+def save_inventory(data):
+    save_json("inventory.json", data)
 
 def add_to_inventory(user_id, card):
     data = load_inventory()
@@ -92,11 +100,36 @@ def add_to_inventory(user_id, card):
     data[uid].append(card)
     save_inventory(data)
 
-def get_user_pulls(user_id):
-    data = load_inventory()
-    return len(data.get(str(user_id), []))
+# === Pull Cooldown ===
 
-# === Commands ===
+def get_pull_data():
+    return load_json("pull_timers.json")
+
+def save_pull_data(data):
+    save_json("pull_timers.json", data)
+
+def can_pull(user_id, count):
+    uid = str(user_id)
+    pull_data = get_pull_data()
+
+    now = time.time()
+    if uid not in pull_data:
+        pull_data[uid] = {"count": 0, "timestamp": now}
+
+    if now - pull_data[uid]["timestamp"] >= COOLDOWN_SECONDS:
+        pull_data[uid] = {"count": 0, "timestamp": now}
+
+    if pull_data[uid]["count"] + count > PULL_LIMIT:
+        remaining = COOLDOWN_SECONDS - (now - pull_data[uid]["timestamp"])
+        mins = int(remaining // 60)
+        secs = int(remaining % 60)
+        return False, f"🚫 You've reached your 50 pull limit! Try again in {mins}m {secs}s."
+
+    pull_data[uid]["count"] += count
+    save_pull_data(pull_data)
+    return True, ""
+
+# === Bot Commands ===
 
 @bot.event
 async def on_ready():
@@ -104,8 +137,9 @@ async def on_ready():
 
 @bot.command()
 async def gacha(ctx):
-    if get_user_pulls(ctx.author.id) >= PULL_LIMIT:
-        await ctx.send("🚫 You've reached the limit of 50 pulls!")
+    allowed, msg = can_pull(ctx.author.id, 1)
+    if not allowed:
+        await ctx.send(msg)
         return
 
     card = draw_card()
@@ -127,8 +161,9 @@ async def gacha(ctx):
 
 @bot.command()
 async def gacha10(ctx):
-    if get_user_pulls(ctx.author.id) + 10 > PULL_LIMIT:
-        await ctx.send("🚫 You've reached the limit of 50 pulls!")
+    allowed, msg = can_pull(ctx.author.id, 10)
+    if not allowed:
+        await ctx.send(msg)
         return
 
     pulled = [draw_card() for _ in range(10)]
@@ -180,7 +215,7 @@ async def inventory(ctx, *, args=""):
         sorted_cards = sorted(user_cards, key=lambda c: rarity_order.index(c["rarity"]))
 
     lines = []
-    for card in sorted_cards[:20]:  # only show top 20 to avoid spam
+    for card in sorted_cards[:20]:  # limit to 20
         lines.append(f"[{card['rarity']}] {card['name']} | UID: `{card['uid']}`")
 
     embed = discord.Embed(
@@ -207,5 +242,5 @@ async def view(ctx, uid: str):
     )
     await ctx.send(embed=embed)
 
-# === Run the bot ===
+# === Start bot ===
 bot.run(os.getenv("DISCORD_TOKEN"))
