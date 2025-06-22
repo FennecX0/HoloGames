@@ -1,80 +1,72 @@
 import discord
 from discord.ext import commands
 import json
-import asyncio
 import random
-import os  # Needed for Railway environment variable
+import asyncio
+import os
 
-# Set up Discord bot intents
-intents = discord.Intents.default()
-intents.message_content = True
+# Load the cards
+with open("cards.json", "r", encoding="utf-8") as f:
+    cards = json.load(f)
 
-# Create bot instance
-bot = commands.Bot(command_prefix="!", intents=intents)
-
-# Load cards from JSON file
-def load_cards():
-    with open("cards.json", "r", encoding="utf-8") as f:
-        return json.load(f)
-
-# Define rarity weights
-RARITY_WEIGHTS = {
-    "C": 65.79,
-    "R": 20,
+# Rarity settings
+rarity_weights = {
+    "C": 79,
+    "R": 50,
     "RRR": 10,
     "SR": 4,
-    "SSR": 0.2,
+    "SSR": 2,
     "TOH": 0.01
 }
 
-# Get summon animation based on rarity
-def get_rarity_animation(rarity):
-    if rarity in ["C", "R", "RR", "RRR"]:
-        return "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif"
-    elif rarity in ["SP", "SR"]:
-        return "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif"
-    elif rarity in ["SSR", "SSR+", "ALT", "ALT+", "TOH"]:
-        return "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif"
-    return None
+rarity_animations = {
+    "C": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
+    "R": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
+    "RRR": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
+    "SR": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif",
+    "SP": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif",
+    "SSR": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif",
+    "TOH": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif"
+}
 
-# Gacha roll logic
-def gacha_roll():
-    cards = load_cards()
-    chosen_rarity = random.choices(
-        population=list(RARITY_WEIGHTS.keys()),
-        weights=list(RARITY_WEIGHTS.values()),
-        k=1
-    )[0]
-    candidates = [c for c in cards if c["rarity"] == chosen_rarity]
-    return random.choice(candidates) if candidates else None
+# Bot setup
+intents = discord.Intents.default()
+bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Gacha command
+# Gacha draw helper
+def draw_card():
+    rarities = list(rarity_weights.keys())
+    weights = list(rarity_weights.values())
+    rarity = random.choices(rarities, weights=weights, k=1)[0]
+    possible_cards = [card for card in cards if card["rarity"] == rarity]
+    return random.choice(possible_cards)
+
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user}")
+
 @bot.command()
 async def gacha(ctx):
-    card = gacha_roll()
-    if not card:
-        await ctx.send("No card found for that rarity.")
-        return
+    card = draw_card()
 
-    glow = get_rarity_animation(card["rarity"])
+    # Show animation first
+    anim = rarity_animations.get(card["rarity"], "")
+    await ctx.send(f"🎆 Summoning... get ready!", file=discord.File(fp=os.devnull) if not anim else None, embed=discord.Embed(title="✨", image=anim) if anim else None)
+    await ctx.send(anim)
 
-    # Show summon light first
-    embed = discord.Embed(title="🎲 Gacha Roll", description=f"Summoning your card...\n**Rarity:** {card['rarity']}")
-    if glow:
-        embed.set_image(url=glow)
-    await ctx.send(embed=embed)
+    # Wait 6 seconds for dramatic effect
+    await asyncio.sleep(6)
 
-    # Wait for dramatic effect
-    await asyncio.sleep(3)
-
-    # Reveal the card
-    result = discord.Embed(
-        title=f"✨ You got {card['name']}!",
-        description=f"**Rarity:** {card['rarity']}\n**Value:** ¥{card['value']}\n**Special Move:** {card['special_move']}"
+    # Show card reveal
+    embed = discord.Embed(
+        title=f"You pulled a {card['rarity']} card!",
+        description=f"**{card['name']}**\n💥 ATK: `{card['attack']}` | 🛡 DEF: `{card['defense']}`\n🎯 Value: ¥{card['value']}",
+        color=discord.Color.gold() if card['rarity'] in ["SSR", "TOH"] else discord.Color.blue()
     )
     if card.get("title"):
-        result.add_field(name="💠 TOH Title", value=card["title"], inline=False)
-    await ctx.send(embed=result)
+        embed.set_footer(text=card["title"])
 
-# Start the bot using Railway's environment variable
+    await ctx.send(embed=embed)
+
+# Start bot
 bot.run(os.getenv("DISCORD_TOKEN"))
