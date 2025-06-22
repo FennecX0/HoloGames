@@ -1,1 +1,202 @@
-
+[
+  {
+    "id": 1,
+    "name": "Gawr Gura",
+    "rarity": "SSR",
+    "value": 2000,
+    "attack": 190,
+    "defense": 165,
+    "special_move": "Trident Typhoon",
+    "title": ""
+  },
+  {
+    "id": 2,
+    "name": "Gawr Gura",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Tidal Sovereign - Atlantis Awakens",
+    "title": "Talent of Hololive: Gawr Gura"
+  },
+  {
+    "id": 3,
+    "name": "Mori Calliope",
+    "rarity": "SSR",
+    "value": 2000,
+    "attack": 183,
+    "defense": 156,
+    "special_move": "Soul Scythe",
+    "title": ""
+  },
+  {
+    "id": 4,
+    "name": "Mori Calliope",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Death's Encore - Crimson Finale",
+    "title": "Talent of Hololive: Mori Calliope"
+  },
+  {
+    "id": 5,
+    "name": "Amelia Watson",
+    "rarity": "SR",
+    "value": 1800,
+    "attack": 180,
+    "defense": 164,
+    "special_move": "Time Hop",
+    "title": ""
+  },
+  {
+    "id": 6,
+    "name": "Amelia Watson",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Chrono Trigger - Infinite Loop",
+    "title": "Talent of Hololive: Amelia Watson"
+  },
+  {
+    "id": 7,
+    "name": "Takanashi Kiara",
+    "rarity": "RRR",
+    "value": 300,
+    "attack": 161,
+    "defense": 127,
+    "special_move": "Phoenix Flare",
+    "title": ""
+  },
+  {
+    "id": 8,
+    "name": "Takanashi Kiara",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Mythical Resurrection - Eternal Flame",
+    "title": "Talent of Hololive: Takanashi Kiara"
+  },
+  {
+    "id": 9,
+    "name": "Ninomae Ina'nis",
+    "rarity": "SR",
+    "value": 1800,
+    "attack": 177,
+    "defense": 143,
+    "special_move": "Void Grasp",
+    "title": ""
+  },
+  {
+    "id": 10,
+    "name": "Ninomae Ina'nis",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Eldritch Embrace - Forbidden Knowledge",
+    "title": "Talent of Hololive: Ninomae Ina'nis"
+  },
+  {
+    "id": 11,
+    "name": "Ouro Kronii",
+    "rarity": "SSR",
+    "value": 2000,
+    "attack": 178,
+    "defense": 145,
+    "special_move": "Temporal Collapse",
+    "title": ""
+  },
+  {
+    "id": 12,
+    "name": "Ouro Kronii",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Absolute Clockwork - World Freeze",
+    "title": "Talent of Hololive: Ouro Kronii"
+  },
+  {
+    "id": 13,
+    "name": "Ceres Fauna",
+    "rarity": "SR",
+    "value": 1800,
+    "attack": 165,
+    "defense": 160,
+    "special_move": "Nature's Blessing",
+    "title": ""
+  },
+  {
+    "id": 14,
+    "name": "Ceres Fauna",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Gaia's Awakening - Verdant Eternity",
+    "title": "Talent of Hololive: Ceres Fauna"
+  },
+  {
+    "id": 15,
+    "name": "Hakos Baelz",
+    "rarity": "SSR",
+    "value": 2000,
+    "attack": 189,
+    "defense": 143,
+    "special_move": "Chaos Dice",
+    "title": ""
+  },
+  {
+    "id": 16,
+    "name": "Hakos Baelz",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Entropy Spiral - Final Gamble",
+    "title": "Talent of Hololive: Hakos Baelz"
+  },
+  {
+    "id": 17,
+    "name": "Nanashi Mumei",
+    "rarity": "SR",
+    "value": 1800,
+    "attack": 158,
+    "defense": 148,
+    "special_move": "Forgotten Memories",
+    "title": ""
+  },
+  {
+    "id": 18,
+    "name": "Nanashi Mumei",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Archivist's Reckoning - Past Unbound",
+    "title": "Talent of Hololive: Nanashi Mumei"
+  },
+  {
+    "id": 19,
+    "name": "Shiori Novella",
+    "rarity": "R",
+    "value": 150,
+    "attack": 130,
+    "defense": 120,
+    "special_move": "Talespin Slash",
+    "title": ""
+  },
+  {
+    "id": 20,
+    "name": "Shiori Novella",
+    "rarity": "TOH",
+    "value": 10000,
+    "attack": 999,
+    "defense": 850,
+    "special_move": "Inkbound Truth - Forbidden Chapter",
+    "title": "Talent of Hololive: Shiori Novella"
+  }
+    ]
