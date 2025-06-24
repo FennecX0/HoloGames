@@ -29,8 +29,9 @@ pull_timers = load_json("pull_timer.json")
 banner_prefs = load_json("banner_prefs.json")
 
 rarity_weights = {
-    "C": 79, "R": 50, "RR": 20, "RRR": 10, "SP": 1, "SR": 4,
-    "SSR": 2, "SSR+": 1, "ALT": 0.10, "ALT+": 0.1, "TOH": 0.01
+    "C": 79, "R": 50, "RR": 20, "RRR": 10, "SP": 1,
+    "SR": 4, "SSR": 2, "SSR+": 1, "ALT": 0.10,
+    "ALT+": 0.1, "TOH": 0.01
 }
 
 rarity_animations = {
@@ -83,15 +84,11 @@ def update_timer(user_id, pulls):
 
 @bot.event
 async def on_ready():
-    print(f"âœ… Logged in as {bot.user}")
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send("Pong!")
+    print(f"✅ Logged in as {bot.user}")
 
 @bot.command()
 async def banner(ctx):
-    embed = discord.Embed(title="ðŸŽ´ Choose Your Banner", description="Type `!enbanner` or `!jpbanner` to pull from a banner.")
+    embed = discord.Embed(title="🎴 Choose Your Banner", description="Type `!enbanner` or `!jpbanner` to pull from a banner.")
     embed.set_image(url=banner_images["EN"])
     await ctx.send(embed=embed)
     await ctx.send(embed=discord.Embed().set_image(url=banner_images["JP"]))
@@ -100,34 +97,82 @@ async def banner(ctx):
 async def enbanner(ctx):
     banner_prefs[str(ctx.author.id)] = "EN"
     save_json("banner_prefs.json", banner_prefs)
-    await ctx.send("âœ… You are now pulling from the **EN** banner.")
+    await ctx.send("✅ You are now pulling from the **EN** banner.")
 
 @bot.command()
 async def jpbanner(ctx):
     banner_prefs[str(ctx.author.id)] = "JP"
     save_json("banner_prefs.json", banner_prefs)
-    await ctx.send("âœ… You are now pulling from the **JP** banner.")
+    await ctx.send("✅ You are now pulling from the **JP** banner.")
 
 @bot.command()
 async def gacha(ctx):
     user_id = str(ctx.author.id)
     ok, info = check_limit(user_id)
     if not ok:
-        await ctx.send(f"ðŸ•’ You've reached your 50 pull limit! Try again in {info} seconds.")
+        await ctx.send(f"🕒 You've reached your 50 pull limit! Try again in {info} seconds.")
         return
+
     card = draw_card(user_id)
     anim = rarity_animations.get(card["rarity"], "")
     await ctx.send(anim)
     await asyncio.sleep(6)
+
     embed = discord.Embed(
-        title=f"{card['name']} - {card['rarity']}",
-        description=f"ðŸŽ´ {card['title']} | ðŸ’¥ {card['attack']} | ðŸ›¡ {card['defense']} | ðŸ’° Â¥{card['value']}",
-        color=discord.Color.gold()
+        title=f"{card['name']} – {card['rarity']}",
+        description=(
+            f"✨ **{card.get('title', 'Hololive Member')}**\n"
+            f"💥 **ATK:** `{card['attack']}` | 🛡 **DEF:** `{card['defense']}`\n"
+            f"💰 **Value:** ¥{card['value']}"
+        ),
+        color=discord.Color.gold() if card['rarity'] in ["SSR", "TOH"] else discord.Color.blue()
     )
-    embed.set_footer(text=f"Pulled by {ctx.author.display_name} | UID: {card['uid']}")
+    embed.set_footer(text=f"Pulled by {ctx.author} | UID: {card['uid']}")
     await ctx.send(embed=embed)
+
     inventory.setdefault(user_id, []).append(card["uid"])
     update_timer(user_id, 1)
     save_json("inventory.json", inventory)
+
+@bot.command()
+async def gacha10(ctx):
+    user_id = str(ctx.author.id)
+    ok, info = check_limit(user_id)
+    if not ok:
+        await ctx.send(f"🕒 You've reached your 50 pull limit! Try again in {info} seconds.")
+        return
+
+    pulled_cards = [draw_card(user_id) for _ in range(10)]
+    rarities = [card["rarity"] for card in pulled_cards]
+    anim = rarity_animations["C"]
+    if any(r in rarities for r in ["SSR", "SSR+", "ALT", "ALT+", "TOH"]):
+        anim = rarity_animations["SSR"]
+    elif any(r in rarities for r in ["SR", "SP"]):
+        anim = rarity_animations["SR"]
+
+    await ctx.send(anim)
+    await asyncio.sleep(6)
+
+    description_lines = []
+    for card in pulled_cards:
+        line = (
+            f"**{card['name']}** – *{card['rarity']}*\n"
+            f"✨ {card.get('title', 'Hololive Member')}\n"
+            f"💥 `{card['attack']}` | 🛡 `{card['defense']}` | 💰 ¥{card['value']}\n"
+            f"🔖 UID: `{card['uid']}`\n"
+        )
+        description_lines.append(line)
+        inventory.setdefault(user_id, []).append(card["uid"])
+
+    update_timer(user_id, 10)
+    save_json("inventory.json", inventory)
+
+    embed = discord.Embed(
+        title=f"🎉 {ctx.author.display_name}'s 10 Pull Results!",
+        description="\n".join(description_lines),
+        color=discord.Color.purple()
+    )
+    embed.set_footer(text=f"Total Cards Pulled: 10")
+    await ctx.send(embed=embed)
 
 bot.run(os.getenv("DISCORD_TOKEN"))
