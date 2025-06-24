@@ -130,4 +130,4 @@ async def gacha(ctx):
     update_timer(user_id, 1)
     save_json("inventory.json", inventory)
 
-bot.run(os.getenv("DISCORD_TOKEN")
+bot.run(os.getenv("DISCORD_TOKEN"))
