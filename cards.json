@@ -1,0 +1,1100 @@
+[
+  {
+    "uid": "EN001-C",
+    "name": "Gawr Gura",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-R",
+    "name": "Gawr Gura",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-RR",
+    "name": "Gawr Gura",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-RRR",
+    "name": "Gawr Gura",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-SP",
+    "name": "Gawr Gura",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-SR",
+    "name": "Gawr Gura",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-SSR",
+    "name": "Gawr Gura",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-SSR+",
+    "name": "Gawr Gura",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-ALT",
+    "name": "Gawr Gura",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-ALT+",
+    "name": "Gawr Gura",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN001-TOH",
+    "name": "Gawr Gura",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-C",
+    "name": "Mori Calliope",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-R",
+    "name": "Mori Calliope",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-RR",
+    "name": "Mori Calliope",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-RRR",
+    "name": "Mori Calliope",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-SP",
+    "name": "Mori Calliope",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-SR",
+    "name": "Mori Calliope",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-SSR",
+    "name": "Mori Calliope",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-SSR+",
+    "name": "Mori Calliope",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-ALT",
+    "name": "Mori Calliope",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-ALT+",
+    "name": "Mori Calliope",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN002-TOH",
+    "name": "Mori Calliope",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-C",
+    "name": "Ninomae Ina'nis",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-R",
+    "name": "Ninomae Ina'nis",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-RR",
+    "name": "Ninomae Ina'nis",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-RRR",
+    "name": "Ninomae Ina'nis",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-SP",
+    "name": "Ninomae Ina'nis",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-SR",
+    "name": "Ninomae Ina'nis",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-SSR",
+    "name": "Ninomae Ina'nis",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-SSR+",
+    "name": "Ninomae Ina'nis",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-ALT",
+    "name": "Ninomae Ina'nis",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-ALT+",
+    "name": "Ninomae Ina'nis",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN003-TOH",
+    "name": "Ninomae Ina'nis",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-C",
+    "name": "Takanashi Kiara",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-R",
+    "name": "Takanashi Kiara",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-RR",
+    "name": "Takanashi Kiara",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-RRR",
+    "name": "Takanashi Kiara",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-SP",
+    "name": "Takanashi Kiara",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-SR",
+    "name": "Takanashi Kiara",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-SSR",
+    "name": "Takanashi Kiara",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-SSR+",
+    "name": "Takanashi Kiara",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-ALT",
+    "name": "Takanashi Kiara",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-ALT+",
+    "name": "Takanashi Kiara",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN004-TOH",
+    "name": "Takanashi Kiara",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-C",
+    "name": "Watson Amelia",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-R",
+    "name": "Watson Amelia",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-RR",
+    "name": "Watson Amelia",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-RRR",
+    "name": "Watson Amelia",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-SP",
+    "name": "Watson Amelia",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-SR",
+    "name": "Watson Amelia",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-SSR",
+    "name": "Watson Amelia",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-SSR+",
+    "name": "Watson Amelia",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-ALT",
+    "name": "Watson Amelia",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-ALT+",
+    "name": "Watson Amelia",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "EN"
+  },
+  {
+    "uid": "EN005-TOH",
+    "name": "Watson Amelia",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "EN"
+  },
+  {
+    "uid": "JP001-C",
+    "name": "Tokino Sora",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-R",
+    "name": "Tokino Sora",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-RR",
+    "name": "Tokino Sora",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-RRR",
+    "name": "Tokino Sora",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-SP",
+    "name": "Tokino Sora",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-SR",
+    "name": "Tokino Sora",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-SSR",
+    "name": "Tokino Sora",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-SSR+",
+    "name": "Tokino Sora",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-ALT",
+    "name": "Tokino Sora",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "JP"
+    },
+  {
+    "uid": "JP001-ALT+",
+    "name": "Tokino Sora",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP001-TOH",
+    "name": "Tokino Sora",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-C",
+    "name": "Shirakami Fubuki",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-R",
+    "name": "Shirakami Fubuki",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-RR",
+    "name": "Shirakami Fubuki",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-RRR",
+    "name": "Shirakami Fubuki",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-SP",
+    "name": "Shirakami Fubuki",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-SR",
+    "name": "Shirakami Fubuki",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-SSR",
+    "name": "Shirakami Fubuki",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-SSR+",
+    "name": "Shirakami Fubuki",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-ALT",
+    "name": "Shirakami Fubuki",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-ALT+",
+    "name": "Shirakami Fubuki",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP002-TOH",
+    "name": "Shirakami Fubuki",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "JP"
+   },
+  {
+    "uid": "JP003-C",
+    "name": "Sakura Miko",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-R",
+    "name": "Sakura Miko",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-RR",
+    "name": "Sakura Miko",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-RRR",
+    "name": "Sakura Miko",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-SP",
+    "name": "Sakura Miko",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-SR",
+    "name": "Sakura Miko",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-SSR",
+    "name": "Sakura Miko",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-SSR+",
+    "name": "Sakura Miko",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-ALT",
+    "name": "Sakura Miko",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-ALT+",
+    "name": "Sakura Miko",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP003-TOH",
+    "name": "Sakura Miko",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-C",
+    "name": "Houshou Marine",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-R",
+    "name": "Houshou Marine",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-RR",
+    "name": "Houshou Marine",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-RRR",
+    "name": "Houshou Marine",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-SP",
+    "name": "Houshou Marine",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-SR",
+    "name": "Houshou Marine",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-SSR",
+    "name": "Houshou Marine",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-SSR+",
+    "name": "Houshou Marine",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-ALT",
+    "name": "Houshou Marine",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-ALT+",
+    "name": "Houshou Marine",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP004-TOH",
+    "name": "Houshou Marine",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-C",
+    "name": "Minato Aqua",
+    "rarity": "C",
+    "attack": 100,
+    "defense": 90,
+    "value": 125,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-R",
+    "name": "Minato Aqua",
+    "rarity": "R",
+    "attack": 120,
+    "defense": 110,
+    "value": 150,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-RR",
+    "name": "Minato Aqua",
+    "rarity": "RR",
+    "attack": 140,
+    "defense": 130,
+    "value": 200,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-RRR",
+    "name": "Minato Aqua",
+    "rarity": "RRR",
+    "attack": 160,
+    "defense": 150,
+    "value": 300,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-SP",
+    "name": "Minato Aqua",
+    "rarity": "SP",
+    "attack": 180,
+    "defense": 170,
+    "value": 1000,
+    "title": "Summer Time",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-SR",
+    "name": "Minato Aqua",
+    "rarity": "SR",
+    "attack": 200,
+    "defense": 190,
+    "value": 1800,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-SSR",
+    "name": "Minato Aqua",
+    "rarity": "SSR",
+    "attack": 220,
+    "defense": 210,
+    "value": 2000,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-SSR+",
+    "name": "Minato Aqua",
+    "rarity": "SSR+",
+    "attack": 240,
+    "defense": 230,
+    "value": 2500,
+    "title": "Hololive Member",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-ALT",
+    "name": "Minato Aqua",
+    "rarity": "ALT",
+    "attack": 260,
+    "defense": 250,
+    "value": 3000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-ALT+",
+    "name": "Minato Aqua",
+    "rarity": "ALT+",
+    "attack": 280,
+    "defense": 270,
+    "value": 5000,
+    "title": "Alternate Form",
+    "group": "JP"
+  },
+  {
+    "uid": "JP005-TOH",
+    "name": "Minato Aqua",
+    "rarity": "TOH",
+    "attack": 300,
+    "defense": 290,
+    "value": 10000,
+    "title": "Talent of Hololive",
+    "group": "JP" 
