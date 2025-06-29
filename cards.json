@@ -1,1102 +1,517 @@
 [
   {
-    "uid": "EN001-C",
-    "name": "Gawr Gura",
+    "uid": "98e675d7",
+    "name": "Inugami Korone",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-R",
-    "name": "Gawr Gura",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
+    "attack": 1978,
+    "defense": 1979,
     "value": 150,
-    "title": "Hololive Member",
-    "group": "EN"
+    "archetype": "Starbound"
   },
   {
-    "uid": "EN001-RR",
-    "name": "Gawr Gura",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-RRR",
-    "name": "Gawr Gura",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-SP",
-    "name": "Gawr Gura",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-SR",
-    "name": "Gawr Gura",
+    "uid": "2640bcf6",
+    "name": "Shion",
     "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "EN"
+    "attack": 1018,
+    "defense": 1813,
+    "value": 1767,
+    "archetype": "Abyssal",
+    "title": "Midnight Melody"
   },
   {
-    "uid": "EN001-SSR",
-    "name": "Gawr Gura",
+    "uid": "2b02f831",
+    "name": "Omaru Polka",
+    "rarity": "SP",
+    "attack": 2550,
+    "defense": 1489,
+    "value": 1028,
+    "archetype": "Phoenixfire",
+    "title": "Summer Splash"
+  },
+  {
+    "uid": "555a2605",
+    "name": "Kaela Kovalskia",
+    "rarity": "R",
+    "attack": 2430,
+    "defense": 1297,
+    "value": 185,
+    "archetype": "Abyssal"
+  },
+  {
+    "uid": "b018bd4b",
+    "name": "Usada Pekora",
     "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "EN"
+    "attack": 2771,
+    "defense": 2373,
+    "value": 2006,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "EN001-SSR+",
-    "name": "Gawr Gura",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-ALT",
-    "name": "Gawr Gura",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-ALT+",
-    "name": "Gawr Gura",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN001-TOH",
-    "name": "Gawr Gura",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-C",
-    "name": "Mori Calliope",
+    "uid": "e9eca0ec",
+    "name": "Omaru Polka",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "EN"
+    "attack": 1176,
+    "defense": 967,
+    "value": 140,
+    "archetype": "Harmony",
+    "title": "Summer Splash"
   },
   {
-    "uid": "EN002-R",
-    "name": "Mori Calliope",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-RR",
-    "name": "Mori Calliope",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-RRR",
-    "name": "Mori Calliope",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-SP",
-    "name": "Mori Calliope",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-SR",
-    "name": "Mori Calliope",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-SSR",
-    "name": "Mori Calliope",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-SSR+",
-    "name": "Mori Calliope",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-ALT",
-    "name": "Mori Calliope",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-ALT+",
-    "name": "Mori Calliope",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN002-TOH",
-    "name": "Mori Calliope",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-C",
-    "name": "Ninomae Ina'nis",
-    "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-R",
-    "name": "Ninomae Ina'nis",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-RR",
-    "name": "Ninomae Ina'nis",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-RRR",
-    "name": "Ninomae Ina'nis",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-SP",
-    "name": "Ninomae Ina'nis",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-SR",
-    "name": "Ninomae Ina'nis",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-SSR",
-    "name": "Ninomae Ina'nis",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-SSR+",
-    "name": "Ninomae Ina'nis",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-ALT",
-    "name": "Ninomae Ina'nis",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-ALT+",
-    "name": "Ninomae Ina'nis",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN003-TOH",
-    "name": "Ninomae Ina'nis",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-C",
-    "name": "Takanashi Kiara",
-    "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-R",
-    "name": "Takanashi Kiara",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-RR",
-    "name": "Takanashi Kiara",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-RRR",
-    "name": "Takanashi Kiara",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-SP",
-    "name": "Takanashi Kiara",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-SR",
-    "name": "Takanashi Kiara",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-SSR",
-    "name": "Takanashi Kiara",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-SSR+",
-    "name": "Takanashi Kiara",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-ALT",
-    "name": "Takanashi Kiara",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-ALT+",
-    "name": "Takanashi Kiara",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN004-TOH",
-    "name": "Takanashi Kiara",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-C",
-    "name": "Watson Amelia",
-    "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-R",
-    "name": "Watson Amelia",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-RR",
-    "name": "Watson Amelia",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-RRR",
-    "name": "Watson Amelia",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-SP",
-    "name": "Watson Amelia",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-SR",
-    "name": "Watson Amelia",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-SSR",
-    "name": "Watson Amelia",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-SSR+",
-    "name": "Watson Amelia",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-ALT",
-    "name": "Watson Amelia",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-ALT+",
-    "name": "Watson Amelia",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "EN"
-  },
-  {
-    "uid": "EN005-TOH",
-    "name": "Watson Amelia",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "EN"
-  },
-  {
-    "uid": "JP001-C",
-    "name": "Tokino Sora",
-    "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-R",
-    "name": "Tokino Sora",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-RR",
-    "name": "Tokino Sora",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-RRR",
-    "name": "Tokino Sora",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-SP",
-    "name": "Tokino Sora",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-SR",
-    "name": "Tokino Sora",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-SSR",
-    "name": "Tokino Sora",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-SSR+",
-    "name": "Tokino Sora",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-ALT",
-    "name": "Tokino Sora",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "JP"
-    },
-  {
-    "uid": "JP001-ALT+",
-    "name": "Tokino Sora",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP001-TOH",
-    "name": "Tokino Sora",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-C",
+    "uid": "a3eb5302",
     "name": "Shirakami Fubuki",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 1900,
+    "defense": 1079,
+    "value": 124,
+    "archetype": "Phoenixfire"
   },
   {
-    "uid": "JP002-R",
-    "name": "Shirakami Fubuki",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-RR",
-    "name": "Shirakami Fubuki",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-RRR",
-    "name": "Shirakami Fubuki",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-SP",
-    "name": "Shirakami Fubuki",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-SR",
-    "name": "Shirakami Fubuki",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-SSR",
-    "name": "Shirakami Fubuki",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-SSR+",
-    "name": "Shirakami Fubuki",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-ALT",
-    "name": "Shirakami Fubuki",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-ALT+",
-    "name": "Shirakami Fubuki",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP002-TOH",
-    "name": "Shirakami Fubuki",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "JP"
-   },
-  {
-    "uid": "JP003-C",
-    "name": "Sakura Miko",
+    "uid": "27ac2e0b",
+    "name": "Gawr Gura",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2012,
+    "defense": 1972,
+    "value": 119,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP003-R",
-    "name": "Sakura Miko",
-    "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-RR",
-    "name": "Sakura Miko",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-RRR",
-    "name": "Sakura Miko",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-SP",
-    "name": "Sakura Miko",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-SR",
-    "name": "Sakura Miko",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-SSR",
-    "name": "Sakura Miko",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-SSR+",
-    "name": "Sakura Miko",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-ALT",
-    "name": "Sakura Miko",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-ALT+",
-    "name": "Sakura Miko",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP003-TOH",
-    "name": "Sakura Miko",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "JP"
-  },
-  {
-    "uid": "JP004-C",
-    "name": "Houshou Marine",
+    "uid": "d6d31e3a",
+    "name": "Shirakami Fubuki",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2543,
+    "defense": 1639,
+    "value": 106,
+    "archetype": "Idolcore"
   },
   {
-    "uid": "JP004-R",
-    "name": "Houshou Marine",
+    "uid": "f25b9a08",
+    "name": "Ninomae Ina'nis",
     "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 1836,
+    "defense": 822,
+    "value": 182,
+    "archetype": "Harmony",
+    "title": "Midnight Melody"
   },
   {
-    "uid": "JP004-RR",
-    "name": "Houshou Marine",
-    "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "JP"
+    "uid": "540fee96",
+    "name": "Shirakami Fubuki",
+    "rarity": "R",
+    "attack": 2196,
+    "defense": 2740,
+    "value": 168,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP004-RRR",
-    "name": "Houshou Marine",
-    "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP004-SP",
-    "name": "Houshou Marine",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "JP"
-  },
-  {
-    "uid": "JP004-SR",
-    "name": "Houshou Marine",
-    "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "JP"
-  },
-  {
-    "uid": "JP004-SSR",
-    "name": "Houshou Marine",
+    "uid": "e906e8dd",
+    "name": "Shion",
     "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2226,
+    "defense": 2129,
+    "value": 2064,
+    "archetype": "Harmony"
   },
   {
-    "uid": "JP004-SSR+",
-    "name": "Houshou Marine",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "JP"
+    "uid": "32daa08e",
+    "name": "Shiranui Flare",
+    "rarity": "C",
+    "attack": 1339,
+    "defense": 1378,
+    "value": 118,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP004-ALT",
-    "name": "Houshou Marine",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "JP"
+    "uid": "9a5ae823",
+    "name": "La+ Darknesss",
+    "rarity": "R",
+    "attack": 2301,
+    "defense": 1437,
+    "value": 197,
+    "archetype": "Starbound",
+    "title": "Celestial Voyage"
   },
   {
-    "uid": "JP004-ALT+",
-    "name": "Houshou Marine",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "JP"
+    "uid": "9ee75c3f",
+    "name": "Nakiri Ayame",
+    "rarity": "RR",
+    "attack": 2356,
+    "defense": 1938,
+    "value": 238,
+    "archetype": "Starbound"
   },
   {
-    "uid": "JP004-TOH",
-    "name": "Houshou Marine",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "JP"
-  },
-  {
-    "uid": "JP005-C",
+    "uid": "b798ff52",
     "name": "Minato Aqua",
     "rarity": "C",
-    "attack": 100,
-    "defense": 90,
-    "value": 125,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2921,
+    "defense": 2274,
+    "value": 130,
+    "archetype": "Techborn",
+    "title": "Summer Splash"
   },
   {
-    "uid": "JP005-R",
+    "uid": "55968284",
+    "name": "Inugami Korone",
+    "rarity": "R",
+    "attack": 2422,
+    "defense": 1125,
+    "value": 158,
+    "archetype": "Phoenixfire"
+  },
+  {
+    "uid": "75ff0f39",
+    "name": "Usada Pekora",
+    "rarity": "C",
+    "attack": 2260,
+    "defense": 2490,
+    "value": 149,
+    "archetype": "Starbound"
+  },
+  {
+    "uid": "cc20a54e",
+    "name": "AZKi",
+    "rarity": "C",
+    "attack": 1190,
+    "defense": 2624,
+    "value": 123,
+    "archetype": "Idolcore"
+  },
+  {
+    "uid": "a6395f07",
+    "name": "Ceres Fauna",
+    "rarity": "C",
+    "attack": 2856,
+    "defense": 2588,
+    "value": 134,
+    "archetype": "Starbound",
+    "title": "Celestial Voyage"
+  },
+  {
+    "uid": "5330dd55",
+    "name": "Gawr Gura",
+    "rarity": "R",
+    "attack": 2670,
+    "defense": 2037,
+    "value": 198,
+    "archetype": "Phoenixfire"
+  },
+  {
+    "uid": "7951c7bb",
+    "name": "Omaru Polka",
+    "rarity": "R",
+    "attack": 1143,
+    "defense": 2336,
+    "value": 168,
+    "archetype": "Starbound",
+    "title": "Idol Showdown"
+  },
+  {
+    "uid": "f2d52ba0",
+    "name": "Yukihana Lamy",
+    "rarity": "C",
+    "attack": 1805,
+    "defense": 2609,
+    "value": 132,
+    "archetype": "Idolcore"
+  },
+  {
+    "uid": "fc1d898a",
     "name": "Minato Aqua",
     "rarity": "R",
-    "attack": 120,
-    "defense": 110,
-    "value": 150,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2821,
+    "defense": 2390,
+    "value": 178,
+    "archetype": "Abyssal"
   },
   {
-    "uid": "JP005-RR",
-    "name": "Minato Aqua",
+    "uid": "372457fb",
+    "name": "IRyS",
     "rarity": "RR",
-    "attack": 140,
-    "defense": 130,
-    "value": 200,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 1964,
+    "defense": 942,
+    "value": 248,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP005-RRR",
+    "uid": "b84bc68d",
+    "name": "Hoshimachi Suisei",
+    "rarity": "R",
+    "attack": 1495,
+    "defense": 2337,
+    "value": 183,
+    "archetype": "Naturekin",
+    "title": "Digital Bloom"
+  },
+  {
+    "uid": "64cd03c4",
+    "name": "La+ Darknesss",
+    "rarity": "C",
+    "attack": 2243,
+    "defense": 2252,
+    "value": 103,
+    "archetype": "Abyssal",
+    "title": "Idol Showdown"
+  },
+  {
+    "uid": "2fb6b2d7",
+    "name": "Tokino Sora",
+    "rarity": "C",
+    "attack": 2986,
+    "defense": 2042,
+    "value": 130,
+    "archetype": "Harmony"
+  },
+  {
+    "uid": "e8a0674a",
+    "name": "Usada Pekora",
+    "rarity": "C",
+    "attack": 2283,
+    "defense": 2736,
+    "value": 106,
+    "archetype": "Naturekin",
+    "title": "Midnight Melody"
+  },
+  {
+    "uid": "b5c3755e",
+    "name": "Inugami Korone",
+    "rarity": "C",
+    "attack": 2587,
+    "defense": 1467,
+    "value": 127,
+    "archetype": "Idolcore"
+  },
+  {
+    "uid": "1ec07d87",
+    "name": "Moona Hoshinova",
+    "rarity": "RRR",
+    "attack": 1848,
+    "defense": 2728,
+    "value": 312,
+    "archetype": "Idolcore"
+  },
+  {
+    "uid": "6ed33f6a",
+    "name": "Amelia Watson",
+    "rarity": "RR",
+    "attack": 1008,
+    "defense": 1674,
+    "value": 225,
+    "archetype": "Abyssal"
+  },
+  {
+    "uid": "8f335dd6",
+    "name": "Kureiji Ollie",
+    "rarity": "C",
+    "attack": 1467,
+    "defense": 2023,
+    "value": 127,
+    "archetype": "Naturekin"
+  },
+  {
+    "uid": "8dee4967",
+    "name": "Hoshimachi Suisei",
+    "rarity": "C",
+    "attack": 1869,
+    "defense": 2075,
+    "value": 115,
+    "archetype": "Chaos"
+  },
+  {
+    "uid": "9273bae1",
+    "name": "Anya Melfissa",
+    "rarity": "C",
+    "attack": 2041,
+    "defense": 1246,
+    "value": 112,
+    "archetype": "Abyssal",
+    "title": "Chaos Carnival"
+  },
+  {
+    "uid": "dccda05b",
+    "name": "Mori Calliope",
+    "rarity": "C",
+    "attack": 2558,
+    "defense": 1739,
+    "value": 120,
+    "archetype": "Abyssal",
+    "title": "Celestial Voyage"
+  },
+  {
+    "uid": "a4064d19",
+    "name": "Usada Pekora",
+    "rarity": "R",
+    "attack": 2767,
+    "defense": 1570,
+    "value": 159,
+    "archetype": "Aquatic"
+  },
+  {
+    "uid": "702a6062",
+    "name": "Ceres Fauna",
+    "rarity": "RRR",
+    "attack": 1645,
+    "defense": 1988,
+    "value": 345,
+    "archetype": "Aquatic"
+  },
+  {
+    "uid": "73ce929c",
+    "name": "Shirakami Fubuki",
+    "rarity": "R",
+    "attack": 1099,
+    "defense": 2362,
+    "value": 197,
+    "archetype": "Naturekin"
+  },
+  {
+    "uid": "176e3d27",
+    "name": "Ceres Fauna",
+    "rarity": "RR",
+    "attack": 2875,
+    "defense": 2157,
+    "value": 233,
+    "archetype": "Techborn"
+  },
+  {
+    "uid": "c9332bfa",
+    "name": "Kaela Kovalskia",
+    "rarity": "C",
+    "attack": 1683,
+    "defense": 2186,
+    "value": 116,
+    "archetype": "Harmony",
+    "title": "Chaos Carnival"
+  },
+  {
+    "uid": "e4f6c54e",
+    "name": "Yukihana Lamy",
+    "rarity": "R",
+    "attack": 2161,
+    "defense": 1019,
+    "value": 158,
+    "archetype": "Starbound"
+  },
+  {
+    "uid": "fa8d9919",
+    "name": "Moona Hoshinova",
+    "rarity": "C",
+    "attack": 1006,
+    "defense": 1253,
+    "value": 103,
+    "archetype": "Starbound"
+  },
+  {
+    "uid": "72456e8a",
+    "name": "Takanashi Kiara",
+    "rarity": "R",
+    "attack": 2843,
+    "defense": 1381,
+    "value": 151,
+    "archetype": "Abyssal"
+  },
+  {
+    "uid": "9ca41dd1",
+    "name": "Hoshimachi Suisei",
+    "rarity": "C",
+    "attack": 1235,
+    "defense": 2546,
+    "value": 138,
+    "archetype": "Aquatic",
+    "title": "Digital Bloom"
+  },
+  {
+    "uid": "57098228",
+    "name": "Gawr Gura",
+    "rarity": "C",
+    "attack": 2101,
+    "defense": 2354,
+    "value": 142,
+    "archetype": "Phoenixfire",
+    "title": "Chaos Carnival"
+  },
+  {
+    "uid": "d5702116",
+    "name": "Usada Pekora",
+    "rarity": "R",
+    "attack": 2455,
+    "defense": 1723,
+    "value": 161,
+    "archetype": "Naturekin"
+  },
+  {
+    "uid": "57a61666",
+    "name": "Nakiri Ayame",
+    "rarity": "C",
+    "attack": 1395,
+    "defense": 1503,
+    "value": 121,
+    "archetype": "Harmony"
+  },
+  {
+    "uid": "781bbbeb",
     "name": "Minato Aqua",
     "rarity": "RRR",
-    "attack": 160,
-    "defense": 150,
-    "value": 300,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 1842,
+    "defense": 845,
+    "value": 333,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP005-SP",
-    "name": "Minato Aqua",
-    "rarity": "SP",
-    "attack": 180,
-    "defense": 170,
-    "value": 1000,
-    "title": "Summer Time",
-    "group": "JP"
+    "uid": "c6e965ee",
+    "name": "Gawr Gura",
+    "rarity": "R",
+    "attack": 1851,
+    "defense": 2487,
+    "value": 170,
+    "archetype": "Aquatic"
   },
   {
-    "uid": "JP005-SR",
-    "name": "Minato Aqua",
+    "uid": "ef17fa0d",
+    "name": "Mori Calliope",
+    "rarity": "RRR",
+    "attack": 2170,
+    "defense": 905,
+    "value": 342,
+    "archetype": "Techborn",
+    "title": "Summer Splash"
+  },
+  {
+    "uid": "ce0c296c",
+    "name": "Takanashi Kiara",
     "rarity": "SR",
-    "attack": 200,
-    "defense": 190,
-    "value": 1800,
-    "title": "Hololive Member",
-    "group": "JP"
+    "attack": 2576,
+    "defense": 1345,
+    "value": 1868,
+    "archetype": "Aquatic",
+    "title": "Summer Splash"
   },
   {
-    "uid": "JP005-SSR",
-    "name": "Minato Aqua",
-    "rarity": "SSR",
-    "attack": 220,
-    "defense": 210,
-    "value": 2000,
-    "title": "Hololive Member",
-    "group": "JP"
+    "uid": "1746de44",
+    "name": "IRyS",
+    "rarity": "C",
+    "attack": 1510,
+    "defense": 1594,
+    "value": 105,
+    "archetype": "Harmony",
+    "title": "Chaos Carnival"
   },
   {
-    "uid": "JP005-SSR+",
-    "name": "Minato Aqua",
-    "rarity": "SSR+",
-    "attack": 240,
-    "defense": 230,
-    "value": 2500,
-    "title": "Hololive Member",
-    "group": "JP"
+    "uid": "548282c8",
+    "name": "Amelia Watson",
+    "rarity": "C",
+    "attack": 1713,
+    "defense": 1736,
+    "value": 139,
+    "archetype": "Abyssal",
+    "title": "Reaper's Stage"
   },
   {
-    "uid": "JP005-ALT",
-    "name": "Minato Aqua",
-    "rarity": "ALT",
-    "attack": 260,
-    "defense": 250,
-    "value": 3000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP005-ALT+",
-    "name": "Minato Aqua",
-    "rarity": "ALT+",
-    "attack": 280,
-    "defense": 270,
-    "value": 5000,
-    "title": "Alternate Form",
-    "group": "JP"
-  },
-  {
-    "uid": "JP005-TOH",
-    "name": "Minato Aqua",
-    "rarity": "TOH",
-    "attack": 300,
-    "defense": 290,
-    "value": 10000,
-    "title": "Talent of Hololive",
-    "group": "JP" 
+    "uid": "0bd0c896",
+    "name": "Amelia Watson",
+    "rarity": "C",
+    "attack": 2444,
+    "defense": 2363,
+    "value": 111,
+    "archetype": "Abyssal"
   }
 ]
