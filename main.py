@@ -140,9 +140,11 @@ async def gacha(interaction: discord.Interaction):
     anim = rarity_animations.get(card["rarity"], None)
     await interaction.response.send_message(anim)
     await asyncio.sleep(6)
-    embed = discord.Embed(title=f"You pulled a {card['rarity']} card!", description=f"**{card['name']}**
+    embed = discord.Embed(
+    title=f"You pulled a {card['rarity']} card!",
+    description=f"**{card['name']}**
 ðŸ’¥ ATK: `{card['attack']}` | ðŸ›¡ DEF: `{card['defense']}`
-ðŸ’´ Value: Â¥{card['value']}", color=discord.Color.gold())
+ðŸŽ¯ Value: Â¥{card['value']}",", color=discord.Color.gold())
     embed.set_footer(text=card["title"] if "title" in card else "")
     await interaction.followup.send(embed=embed)
     # Save to inventory
@@ -220,5 +222,5 @@ async def gacha10(interaction: discord.Interaction):
     inventory.setdefault(uid, []).extend(results)
     save_json("inventory.json", inventory)
 
-    # Bot Runs
+    # Run Bot
     bot.run(os.getenv("DISCORD_TOKEN"))
