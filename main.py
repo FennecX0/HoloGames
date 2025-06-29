@@ -1,189 +1,105 @@
-import discord
-from discord.ext import commands
-from discord.ui import View, Button
-import json
-import random
-import asyncio
-import os
-import time
+import discord from discord.ext import commands from discord.ui import View, Button import json import os import random import asyncio
 
-# Load or initialize files
-def load_json(filename, default):
-    if not os.path.exists(filename):
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(default, f, indent=2)
-    with open(filename, "r", encoding="utf-8") as f:
-        return json.load(f)
+--- Load Data ---
 
-def save_json(filename, data):
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+def load_json(filename): if not os.path.exists(filename): with open(filename, "w") as f: f.write("{}") with open(filename, "r", encoding="utf-8") as f: return json.load(f)
 
-cards = load_json("cards.json", [])
-inventory = load_json("inventory.json", {})
-pull_timers = load_json("pull_timers.json", {})
-banner_prefs = load_json("banner_prefs.json", {})
+def save_json(filename, data): with open(filename, "w", encoding="utf-8") as f: json.dump(data, f, indent=2)
 
-rarity_weights = {
-    "C": 79,
-    "R": 50,
-    "RR": 20,
-    "RRR": 10,
-    "SP": 1,
-    "SR": 4,
-    "SSR": 2,
-    "SSR+": 1,
-    "ALT+": 0.1,
-    "TOH": 0.01
-}
+cards = load_json("cards.json") inventory = load_json("inventory.json") banner_prefs = load_json("banner_prefs.json")
 
-rarity_animations = {
-    "C": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
-    "R": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
-    "RR": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
-    "RRR": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif",
-    "SP": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif",
-    "SR": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif",
-    "SSR": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif",
-    "SSR+": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif",
-    "ALT+": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif",
-    "TOH": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif"
-}
+rarity_weights = { "C": 79, "R": 50, "RR": 20, "RRR": 10, "SP": 4, "SR": 3, "SSR+": 2, "ALT+": 1, "TOH": 0.2 }
 
-JP_MEMBERS = ["Pekora", "Fubuki", "Suisei", "Miko", "Marine", "Korone", "Aqua", "Shion", "Ayame", "Sora", "AZKi", "Polka", "Lamy", "Flare"]
+rarity_animations = { "C": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif", "R": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif", "RRR": "https://media.tenor.com/KGwWGVz9-XQAAAAM/genshin-impact-wish.gif", "SR": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif", "SP": "https://media.tenor.com/JcMSVVkgfgMAAAAM/genshin-wish.gif", "SSR+": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif", "TOH": "https://media.tenor.com/edP0ZdPcU8IAAAAM/genshin-impact-wish.gif" }
 
-def get_banner_cards(region):
-    if region == "JP":
-        return [card for card in cards if any(jp in card["name"] for jp in JP_MEMBERS)]
-    else:
-        return [card for card in cards if all(jp not in card["name"] for jp in JP_MEMBERS)]
+banners = [ { "name": "EN", "image": "https://cdn.discordapp.com/attachments/1383855862673571891/1386320198222479506/Untitled133_20250622200308.png" }, { "name": "JP", "image": "https://cdn.discordapp.com/attachments/1383855862673571891/1386320188110143589/Untitled135_20250622201347.png" } ]
 
-def draw_card(region):
-    pool = get_banner_cards(region)
-    rarities = list(rarity_weights.keys())
-    weights = list(rarity_weights.values())
-    rarity = random.choices(rarities, weights=weights, k=1)[0]
-    filtered = [c for c in pool if c["rarity"] == rarity]
-    return random.choice(filtered) if filtered else random.choice(pool)
+--- Bot Setup ---
 
-def format_card(card):
-    return f"[{card['uid']}] {card['rarity']} | {card['name']} | ATK: {card['attack']} | DEF: {card['defense']} | ¥{card['value']} | {card['archetype']}"
+intents = discord.Intents.default() intents.message_content = True bot = commands.Bot(command_prefix="!", intents=intents)
 
-intents = discord.Intents.default()
-intents.message_content = True
-bot = commands.Bot(command_prefix="!", intents=intents)
+--- Draw Logic ---
 
-@bot.event
-async def on_ready():
-    print(f"Logged in as {bot.user}")
+def draw_card(group): rarities = list(rarity_weights.keys()) weights = list(rarity_weights.values()) rarity = random.choices(rarities, weights=weights)[0] group_cards = [card for card in cards if card.get("rarity") == rarity and card.get("group") == group] return random.choice(group_cards) if group_cards else None
 
-@bot.command()
-async def banner(ctx):
-    embed = discord.Embed(title="Which banner would you like to gacha on?")
-    embed.set_image(url="https://cdn.discordapp.com/attachments/1383855862673571891/1386320198222479506/Untitled133_20250622200308.png")
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1383855862673571891/1386320188110143589/Untitled135_20250622201347.png")
+--- Save Card to Inventory ---
 
-    class BannerView(View):
-        @discord.ui.button(label="EN Banner", style=discord.ButtonStyle.primary)
-        async def en(self, interaction, button):
-            banner_prefs[str(ctx.author.id)] = "EN"
-            save_json("banner_prefs.json", banner_prefs)
-            await interaction.response.send_message("✅ EN banner selected!", ephemeral=True)
+def add_to_inventory(user_id, card): if str(user_id) not in inventory: inventory[str(user_id)] = [] inventory[str(user_id)].append(card) save_json("inventory.json", inventory)
 
-        @discord.ui.button(label="JP Banner", style=discord.ButtonStyle.secondary)
-        async def jp(self, interaction, button):
-            banner_prefs[str(ctx.author.id)] = "JP"
-            save_json("banner_prefs.json", banner_prefs)
-            await interaction.response.send_message("✅ JP banner selected!", ephemeral=True)
+--- Banner Selection View ---
 
-    await ctx.send(embed=embed, view=BannerView())
+class BannerSelector(View): def init(self, user_id): super().init(timeout=60) self.user_id = user_id self.index = 0 self.message = None
 
-@bot.command()
-async def gacha(ctx):
-    uid = str(ctx.author.id)
-    region = banner_prefs.get(uid, "EN")
+async def update_banner(self, interaction):
+    banner = banners[self.index]
+    embed = discord.Embed(title="Which banner would you like to gacha on?", color=discord.Color.blurple())
+    embed.set_image(url=banner["image"])
+    await interaction.response.edit_message(embed=embed, view=self)
 
-    timer = pull_timers.get(uid, {"pulls": 0, "time": time.time()})
-    if time.time() - timer["time"] > 1800:
-        timer = {"pulls": 0, "time": time.time()}
-    if timer["pulls"] >= 50:
-        remaining = int(1800 - (time.time() - timer["time"]))
-        await ctx.send(f"⏳ You've reached the 50 pull limit. Please wait {remaining // 60}m {remaining % 60}s.")
+@discord.ui.button(label="Previous", style=discord.ButtonStyle.gray)
+async def previous(self, interaction: discord.Interaction, button: Button):
+    if interaction.user.id != self.user_id:
         return
+    self.index = (self.index - 1) % len(banners)
+    await self.update_banner(interaction)
 
-    timer["pulls"] += 1
-    pull_timers[uid] = timer
-    save_json("pull_timers.json", pull_timers)
+@discord.ui.button(label="Next", style=discord.ButtonStyle.gray)
+async def next(self, interaction: discord.Interaction, button: Button):
+    if interaction.user.id != self.user_id:
+        return
+    self.index = (self.index + 1) % len(banners)
+    await self.update_banner(interaction)
 
-    card = draw_card(region)
-    anim = rarity_animations.get(card["rarity"], "")
+@discord.ui.button(label="Choose this Banner", style=discord.ButtonStyle.green)
+async def choose(self, interaction: discord.Interaction, button: Button):
+    if interaction.user.id != self.user_id:
+        return
+    chosen = banners[self.index]
+    banner_prefs[str(self.user_id)] = chosen["name"]
+    save_json("banner_prefs.json", banner_prefs)
+    await interaction.response.edit_message(content=f"✅ You selected **{chosen['name']}** banner! Use `!gacha` or `!gacha10`.", embed=None, view=None)
 
+--- Commands ---
+
+@bot.command() async def banner(ctx): view = BannerSelector(user_id=ctx.author.id) banner = banners[0] embed = discord.Embed(title="Which banner would you like to gacha on?", color=discord.Color.blurple()) embed.set_image(url=banner["image"]) await ctx.send(embed=embed, view=view)
+
+@bot.command() async def gacha(ctx): group = banner_prefs.get(str(ctx.author.id), "EN") card = draw_card(group) if not card: await ctx.send("No card could be pulled. Try again later.") return
+
+anim = rarity_animations.get(card['rarity'], None)
+if anim:
     msg = await ctx.send(anim)
     await asyncio.sleep(6)
     await msg.delete()
 
+embed = discord.Embed(
+    title=f"{card['name']} — {card['rarity']}",
+    description=f"🏷 {card.get('title', 'Hololive Member')}\n💴 {card['value']} | 💥 {card['attack']} | 🛡 {card['defense']}",
+    color=discord.Color.gold() if card['rarity'] in ["TOH", "SSR+"] else discord.Color.blue()
+)
+embed.set_footer(text=f"Pulled by {ctx.author.display_name} | UID: {card['uid']}")
+
+await ctx.send(embed=embed)
+add_to_inventory(ctx.author.id, card)
+
+@bot.command(name="gacha10") async def gacha10(ctx): group = banner_prefs.get(str(ctx.author.id), "EN") pulled = [] for _ in range(10): card = draw_card(group) if card: pulled.append(card) add_to_inventory(ctx.author.id, card)
+
+# pick highest rarity animation
+highest = max(pulled, key=lambda x: list(rarity_weights.keys()).index(x["rarity"]))
+anim = rarity_animations.get(highest['rarity'], None)
+if anim:
+    msg = await ctx.send(anim)
+    await asyncio.sleep(6)
+    await msg.delete()
+
+for i, card in enumerate(pulled, start=1):
     embed = discord.Embed(
-        title=f"{ctx.author.display_name} pulled a {card['rarity']}!",
-        description=f"**{card['name']}**\nUID: `{card['uid']}`\n⚔️ {card['attack']} | 🛡 {card['defense']} | 💰 ¥{card['value']}\n🔮 {card['archetype']}",
-        color=discord.Color.gold() if card['rarity'] in ["SSR", "TOH"] else discord.Color.blue()
+        title=f"{card['name']} — {card['rarity']}",
+        description=f"🏷 {card.get('title', 'Hololive Member')}\n💴 {card['value']} | 💥 {card['attack']} | 🛡 {card['defense']}",
+        color=discord.Color.gold() if card['rarity'] in ["TOH", "SSR+"] else discord.Color.blue()
     )
-    if "title" in card:
-        embed.set_footer(text=card["title"])
+    embed.set_footer(text=f"Pulled by {ctx.author.display_name} | UID: {card['uid']} | Card {i}/10")
     await ctx.send(embed=embed)
 
-    inventory.setdefault(uid, []).append(card)
-    save_json("inventory.json", inventory)
-
-@bot.command()
-async def inventory(ctx):
-    uid = str(ctx.author.id)
-    user_cards = inventory.get(uid, [])
-    if not user_cards:
-        await ctx.send("Your inventory is empty!")
-        return
-
-    pages = [user_cards[i:i+10] for i in range(0, len(user_cards), 10)]
-    page_index = 0
-
-    class InvView(View):
-        def __init__(self):
-            super().__init__()
-            self.value = None
-
-        @discord.ui.button(label="Next", style=discord.ButtonStyle.secondary)
-        async def next(self, interaction, button):
-            nonlocal page_index
-            page_index = (page_index + 1) % len(pages)
-            await interaction.response.edit_message(embed=make_embed(), view=self)
-
-        @discord.ui.button(label="Previous", style=discord.ButtonStyle.secondary)
-        async def prev(self, interaction, button):
-            nonlocal page_index
-            page_index = (page_index - 1) % len(pages)
-            await interaction.response.edit_message(embed=make_embed(), view=self)
-
-    def make_embed():
-        embed = discord.Embed(title=f"{ctx.author.display_name}'s Inventory (Page {page_index+1}/{len(pages)})")
-        embed.description = "\n".join(format_card(card) for card in pages[page_index])
-        total = sum(card["value"] for card in user_cards)
-        embed.set_footer(text=f"WataCoins: ¥{total}")
-        return embed
-
-    await ctx.send(embed=make_embed(), view=InvView())
-
-@bot.command()
-async def view(ctx, uid: str):
-    for card in cards:
-        if card["uid"] == uid:
-            embed = discord.Embed(
-                title=f"{card['name']} [{card['rarity']}]",
-                description=f"⚔️ ATK: `{card['attack']}`\n🛡 DEF: `{card['defense']}`\n💰 ¥{card['value']}\n🔮 Archetype: {card['archetype']}\nUID: `{card['uid']}`",
-                color=discord.Color.green()
-            )
-            if "title" in card:
-                embed.set_footer(text=card["title"])
-            await ctx.send(embed=embed)
-            return
-    await ctx.send("❌ Card not found.")
+--- Run ---
 
 bot.run(os.getenv("DISCORD_TOKEN"))
